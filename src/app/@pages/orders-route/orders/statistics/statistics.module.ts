@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StatisticsComponent } from './statistics.component';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -8,6 +9,7 @@ import { StatisticsComponent } from './statistics.component';
   ],
   imports: [
     CommonModule,
+    NgChartsModule
   ]
 })
 export class StatisticsModule { }

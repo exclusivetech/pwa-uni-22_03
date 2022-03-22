@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { OrdersComponent } from './orders/orders.component';
+import { StatisticsModule } from './orders/statistics/statistics.module';
 
 @NgModule({
   declarations: [
@@ -9,7 +10,8 @@ import { OrdersComponent } from './orders/orders.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    StatisticsModule
   ]
 })
 export class OrdersModule { }
