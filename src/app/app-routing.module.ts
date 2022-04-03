@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
+import { TAuthService } from 't-auth';
 
 /* 
 const routes: Routes = [
@@ -10,18 +11,16 @@ const routes: Routes = [
 export const routes: Routes = [
   {
     path: 'pages',
-    // canActivate: [AuthModule], // here auth module
+    canActivate: [TAuthService],
     loadChildren: () => import('./@pages/pages.module')
       .then(r => r.PagesModule),
   },
-  /* aspetto
   {
     path: 'auth',
     // loadChildren: './auth/auth.module#NgxGispAuthModule',
     loadChildren: () => import('./@auth/auth.module')
       .then(r => r.AuthModule),
   },
-  */
   { path: '', redirectTo: 'pages', pathMatch: 'full' },
   { path: '**', redirectTo: 'pages' },
 ];

@@ -1,6 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { PagesComponent } from './pages.component';
+import { TAuthService } from 't-auth';
 
 const routes: Routes = [{
   path: '',
@@ -9,12 +10,14 @@ const routes: Routes = [{
     {
       path: 'dashboard',
       // canActivate: [PagesAuthGuard],
+      canActivate: [TAuthService],
       loadChildren: () => import('./dashboard-route/dashboard-route.module')
         .then(r => r.DashboardRouteModule),
     },
     {
       path: 'orders',
       // canActivate: [PagesAuthGuard],
+      canActivate: [TAuthService],
       loadChildren: () => import('./orders-route/orders-route.module')
         .then(r => r.OrdersRouteModule),
     },

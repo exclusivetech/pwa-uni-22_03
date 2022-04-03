@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
+import { TApiModule } from 't-api';
+import { TAuthModule } from 't-auth';
 
 
 
@@ -11,7 +13,9 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    TAuthModule,
+    TApiModule
   ]
 })
 export class DashboardRouteModule { }
