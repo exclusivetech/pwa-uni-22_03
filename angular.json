@@ -82,7 +82,8 @@
               "browserTarget": "pwa-uni-22_03:build:production"
             },
             "development": {
-              "browserTarget": "pwa-uni-22_03:build:development"
+              "browserTarget": "pwa-uni-22_03:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

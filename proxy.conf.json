@@ -1,0 +1,7 @@
+{
+    "/helloworld.Greeter": {
+        "target": "http://localhost:10000",
+        "secure": false,
+        "changeOrigin": true
+    }
+}
